@@ -1,0 +1,242 @@
+:root {
+  color-scheme: light;
+  background: #fafaf9;
+  color: #1c1917;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+}
+
+.site-main {
+  flex: 1;
+}
+
+.page-container,
+.nav-container,
+.footer-container {
+  width: min(100% - 40px, 860px);
+  margin: 0 auto;
+}
+
+.page-container {
+  padding: 40px 0;
+}
+
+.site-header,
+.site-footer,
+.service-card,
+.info-panel {
+  border: 1px solid #d6d3d1;
+  background: #fff;
+}
+
+.site-header,
+.site-footer {
+  border-right: 0;
+  border-left: 0;
+}
+
+.nav-container,
+.footer-container {
+  display: flex;
+  min-height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.brand {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+
+.nav-link {
+  color: #44403c;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link-active,
+.eyebrow,
+.text-link,
+.detail-back,
+.service-card-link {
+  color: #166534;
+}
+
+.nav-link-active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.footer-container {
+  color: #57534e;
+  font-size: 14px;
+}
+
+.footer-container p,
+.eyebrow,
+.service-number {
+  margin: 0;
+}
+
+.home-hero {
+  border-bottom: 1px solid #d6d3d1;
+  padding-bottom: 32px;
+}
+
+.home-hero h1,
+.page-title {
+  margin: 10px 0;
+  font-size: 32px;
+}
+
+.home-hero > p:not(.eyebrow),
+.section-description,
+.detail-description,
+.about-copy,
+.contact-copy,
+.service-card-description,
+.home-contact p {
+  color: #44403c;
+  line-height: 1.7;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 600;
+  text-underline-offset: 4px;
+}
+
+.home-services {
+  padding: 32px 0;
+}
+
+.section-heading h2 {
+  margin: 8px 0;
+  font-size: 26px;
+}
+
+.service-grid,
+.info-grid,
+.detail-grid,
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.service-card,
+.info-panel {
+  padding: 18px;
+}
+
+.service-card {
+  text-decoration: none;
+}
+
+.service-card:hover {
+  border-color: #15803d;
+}
+
+.service-card h3 {
+  margin: 6px 0;
+}
+
+.service-card-description,
+.service-card-link {
+  margin: 8px 0;
+}
+
+.service-card-link {
+  display: inline-block;
+  font-weight: 600;
+}
+
+.home-contact {
+  border-top: 1px solid #d6d3d1;
+  padding-top: 24px;
+}
+
+.home-contact p,
+.info-panel p,
+.detail-description,
+.contact-copy {
+  margin: 10px 0;
+}
+
+.info-panel h2,
+.detail-benefits h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.info-panel ul,
+.detail-benefits ul {
+  padding-left: 20px;
+  color: #44403c;
+  line-height: 1.8;
+}
+
+.service-step {
+  display: flex;
+  gap: 12px;
+}
+
+.service-step span {
+  color: #166534;
+  font-weight: 700;
+}
+
+.detail-back {
+  font-weight: 600;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  .page-container {
+    padding: 28px 0;
+  }
+
+  .nav-container,
+  .footer-container {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  .service-grid,
+  .info-grid,
+  .detail-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero h1,
+  .page-title {
+    font-size: 28px;
+  }
+}
